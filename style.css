@@ -1,0 +1,333 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* My CSS */
+
+:root {
+	--custom-cream: #F4FEC1;
+	--custom-ivory: #FBFFEB;
+	--custom-mindaro: #D9F9A5;
+	--custom-citron: #D2D68D;
+	--custom-cinereous: #81726A;
+	--custom-wenge: #68534D;
+	--custom-wenge-darker: #51403c;
+	--custom-not-read: rgb(255, 119, 119);
+	--custom-read: rgb(132, 255, 132);
+	--custom-btn-grey: rgb(190, 190, 190);
+
+	--padding-md: 20px;
+	--roundness-base: 10px;
+	--roundness-button: 5px;
+	--border-width: 1rem;
+	--popup-height: 280px;
+	--popup-width: 200px;
+}
+
+
+a:hover {
+	color: var(--custom-cinereous);
+}
+
+a:active {
+	color:rgb(145, 144, 144);
+}
+
+a:visited {
+	color: var(--custom-wenge);
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	background-color: var(--custom-ivory);
+}
+
+header {
+    display: flex;
+    place-content: center;
+	align-items: center;
+    padding: 40px 20px 40px 20px;
+	color: var(--custom-wenge-darker);
+}
+
+@media (max-width: 350px) {
+	header {
+		flex-direction: column;
+	}
+}
+
+.material-symbols-outlined {
+	font-size: 8rem;
+	margin-right: 20px;
+}
+
+main {
+	flex-grow: 1;
+	padding: 40px 20px 40px 20px;
+}
+
+.popup-btn {
+	font-size: 2rem;
+	background-color: var(--custom-citron);
+	border: none;
+	width: 20%;
+	border-radius: var(--roundness-button);
+	color: var(--custom-wenge-darker);
+	margin-bottom: 20px;
+}
+
+.popup-btn:hover {
+	transform: translateY(-2px);
+	box-shadow: 0px 2px 2px 0px rgb(0, 0, 0);
+}
+
+.popup-btn:focus-visible {
+	transform: translateY(-2px);
+	box-shadow: 0px 2px 2px 0px rgb(0, 0, 0);
+	outline: 2px solid black;
+}
+
+.popup-btn:active {
+	transform: translateY(1px);
+	box-shadow: none;
+}
+
+.add {
+	display:flex;
+	place-content: center;
+	align-items: center;
+}
+
+#add-icon {
+	font-size: 4rem;
+	margin-right: 0px;
+}
+
+.add-books {
+	position: fixed;
+	width: var(--popup-width);
+	height: var(--popup-height);
+	top: calc(50% - var(--popup-height)/2 - var(--padding-md) - var(--border-width));
+	left: calc(50% - var(--popup-width)/2 - var(--padding-md) - var(--border-width));
+	transform: scale(0);
+	transition: 200ms transform ease-in-out;
+	background-color: var(--custom-cinereous);
+	padding: var(--padding-md);
+	border: var(--border-width) solid var(--custom-wenge);
+	border-radius: var(--roundness-base);
+	color: var(--custom-ivory);
+}
+
+.open-popup {
+	transform: scale(1);
+}
+
+.btn {
+	background: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+#close {
+	position: absolute;
+	bottom: 86%;
+	left: 79%;
+	color: var(--custom-ivory)
+}
+
+.close-button {
+	font-size: 2rem;
+	margin-right: 0px;
+}
+
+#submit {
+	width: 100%;
+	background-color: var(--custom-citron);
+	color: var(--custom-wenge);
+	border-radius: var(--roundness-button);
+	font-size: 1.3rem;
+}
+
+
+.form-item {
+	display: flex;
+	flex-direction: column;
+	padding: 5px 0px;
+}
+
+fieldset input {
+	padding: 5px;
+	margin: 8px 0px;
+	border: none;
+	border-radius: var(--roundness-button);
+	outline-color: var(--custom-wenge);
+}
+
+.library {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 300px);
+	grid-template-rows: repeat(auto-fit, 1fr);
+	justify-content: center;
+	gap: var(--padding-md);
+}
+
+.book {
+	background-color: var(--custom-cinereous);
+	padding: var(--padding-md);
+	text-align: center;
+	border: 1rem solid var(--custom-wenge);
+	border-radius: 10px;
+	overflow: auto;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	color: var(--custom-ivory);
+}
+
+.book h2 {
+	font-size: 1.5rem;
+	overflow-wrap: break-word;
+}
+
+.delete-button {
+	font-size: 1rem;
+	background-color: var(--custom-btn-grey);
+	border: none;
+	width: 100%;
+	border-radius: var(--roundness-button);
+}
+
+.read-button {
+	font-size: 1.2rem;
+	background-color: var(--custom-not-read);
+	border: none;
+	width: 100%;
+	border-radius: var(--roundness-button);
+}
+
+.toggle-btn:hover {
+	transform: translateY(-2px);
+	box-shadow: 0px 2px 2px 0px rgb(0, 0, 0);
+}
+
+.toggle-btn:focus-visible {
+	transform: translateY(-2px);
+	box-shadow: 0px 2px 2px 0px rgb(0, 0, 0);
+	outline: 2px solid black;
+}
+
+.toggle-btn:active {
+	transform: translateY(1px);
+	box-shadow: none;
+}
+
+.read {
+	background-color: var(--custom-read);
+}
+
+footer {
+    display: flex;
+    place-content: center;
+    background-color: var(--custom-citron);
+    padding: var(--padding-md);
+	color: var(--custom-wenge-darker)
+}
+
+.cookie-overlay {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: fixed;
+	width: 22rem;
+	bottom: 5rem;
+	right: 3rem;
+	background: var(--custom-cinereous);
+	z-index: 2051;
+	line-height: 20px;
+	font-size: 14px;
+	border-radius: 6px;
+	padding: 10px;
+	border: 3px solid var(--custom-wenge);
+	color: var(--custom-ivory);
+	font: inherit;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.storage-btn {
+	background-color: var(--custom-citron);
+	border-radius: var(--roundness-button);
+	color: var(--custom-wenge-darker);
+	margin: 4px 2px;
+}
+
+.storage-btn:hover {
+	transform: translateY(-2px);
+	box-shadow: 0px 2px 2px 0px rgb(0, 0, 0);
+}
+
+.storage-btn:focus-visible {
+	transform: translateY(-2px);
+	box-shadow: 0px 2px 2px 0px rgb(0, 0, 0);
+	outline: 2px solid black;
+}
+
+.storage-btn:active {
+	transform: translateY(1px);
+	box-shadow: none;
+}
+
+.clear-storage {
+	margin-top: 10px;
+}
+

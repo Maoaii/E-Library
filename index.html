@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Stylesheets -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+
+    <title>Library</title>
+</head>
+<body class="container">
+    <header>
+        <span class="material-symbols-outlined">library_books</span>
+        <h1>Library</h1>
+    </header>
+
+    <main>
+        <div class="add">
+            <button class="popup-btn">+ Add new book</button>
+        </div>
+
+        <form class="add-books" action="#" autocomplete="off">
+            <button type="button" id="close" class="btn"><span class="material-symbols-outlined close-button">close</span></button>
+            
+            <fieldset class="form-item">
+                <label for="name">Name*</label>
+                <input type="text" name="name" id="name" required pattern=".*\S+.*">
+            </fieldset>
+            
+            <fieldset class="form-item">
+                <label for="author">Author*</label>
+                <input type="text" name="author" id="author" required pattern=".*\S+.*">
+            </fieldset>
+
+            <fieldset class="form-item">
+                <label for="pages">Total Pages*</label>
+                <input type="number" name="pages" id="pages" min="0" max="9007199254740991" required pattern=".*\S+.*">
+            </fieldset>
+
+            <fieldset class="form-item">
+                <label for="read">Have you read this book?</label>
+                <input type="checkbox" name="read" id="read">
+            </fieldset>
+
+            <button type="submit" class="btn toggle-btn" id="submit">Add book</button>            
+        </form>
+
+        <section class="library">
+            
+        </section>
+
+        
+    </main>
+
+    <footer>
+        <p>Project created by <a href="https://github.com/Maoaii">Lucas Girotto</a></p>
+    </footer>
+
+    <div class="cookie-overlay">
+        <div>
+            By clicking the "Accept" button below, you agree to our local storage of information from the Library.
+        </div>
+        <div>
+            <button class="btn storage-btn accept-local-storage">Accept</button>
+            <button class="btn storage-btn decline-local-storage">Decline</button>
+        </div>
+
+        <button class="btn storage-btn clear-storage">
+            Clear local storage
+        </button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
