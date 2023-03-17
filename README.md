@@ -9,7 +9,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/Maoaii/E-Library">
-    <img src="img/favicon/favicon.png/" alt="Logo" width="80" height="80" style="color:white;">
+    <img src="img/favicon/logo.png/" alt="Logo" width="80" height="80" style="color:white;">
   </a>
 
 <h3 align="center">E-Library</h3>
