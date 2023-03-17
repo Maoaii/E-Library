@@ -38,7 +38,6 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
@@ -49,16 +48,26 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+The Library was build with local storage in mind, so, by default, the user agrees to it. However, there's a popup in which the user can disagree to using it and the books won't be stored (defeats a bit the purpose of the project).
+
+There's a Home page allows the user to add new books to the library.
 <img src="./img/HomePage.png">
+<br />
+<br />
+<br />
 
+There's an Add Books page where the user can insert the information regarding a certain book they're interested in.
 <img src="./img/AddBookPage.png">
+<br />
+<br />
+<br />
 
+After adding a new book, it will be displayed in the Home Page. 
+The user can then toggle the "read" status of that book or delete it.
 <img src="./img/HomePage-Books.png">
-
+<br />
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 ### Built With
 * [![HTML][HTML.com]][HTML-url]
@@ -67,15 +76,6 @@
 * [![local_storage][local_storage.com]][local_storage-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 <!-- LICENSE -->
 ## License
