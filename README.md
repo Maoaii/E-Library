@@ -1,3 +1,5 @@
+<a name="readme-top"></a>
+
 <!-- PROJECT SHIELDS -->
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
@@ -7,7 +9,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/Maoaii/E-Library">
-    <img src="images/book-icon.svg" alt="Logo" width="80" height="80">
+    <img src="img/book-icon.svg" alt="Logo" width="80" height="80" style="color:white;">
   </a>
 
 <h3 align="center">E-Library</h3>
@@ -55,7 +57,10 @@
 
 
 ### Built With
-* [![JQuery][JQuery.com]][JQuery-url]
+* [![HTML][HTML.com]][HTML-url]
+* [![CSS][CSS.com]][CSS-url]
+* [![JavaScript][JavaScript.com]][JavaScript-url]
+* [![local_storage][local_storage.com]][local_storage-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -71,7 +76,7 @@ Use this space to show useful examples of how a project can be used. Additional 
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the MIT License. See `LICENSE` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -96,5 +101,14 @@ Project Link: [https://maoaii.github.io/E-Library/](https://maoaii.github.io/E-L
 
 [product-screenshot]: images/screenshot.png
 
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
+[HTML.com]: https://img.shields.io/badge/HTML-orange?style=for-the-badge&&logoColor=white
+[HTML-url]: https://developer.mozilla.org/en-US/docs/Web/HTML
+
+[CSS.com]: https://img.shields.io/badge/CSS-blue?style=for-the-badge&&logoColor=white
+[CSS-url]: [https://developer.mozilla.org/en-US/docs/Web/HTML](https://developer.mozilla.org/en-US/docs/Web/CSS)
+
+[JavaScript.com]: https://img.shields.io/badge/JS-yellow?style=for-the-badge&&logoColor=white
+[JavaScript-url]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+
+[local_storage.com]: https://img.shields.io/badge/local_storage-grey?style=for-the-badge&&logoColor=white
+[local_storage-url]: https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API
