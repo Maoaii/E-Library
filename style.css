@@ -66,7 +66,7 @@ table {
 	--roundness-button: 5px;
 	--border-width: 1rem;
 	--popup-height: 280px;
-	--popup-width: 200px;
+	--popup-width: min(50vw, 200px);
 }
 
 
@@ -82,10 +82,6 @@ a:visited {
 	color: var(--custom-wenge);
 }
 
-h1 {
-    font-size: 5rem;
-}
-
 body {
 	display: flex;
 	flex-direction: column;
@@ -97,20 +93,16 @@ header {
     display: flex;
     place-content: center;
 	align-items: center;
+	font-size: max(4rem, 8vw);
     padding: 40px 20px 40px 20px;
 	color: var(--custom-wenge-darker);
 }
 
-@media (max-width: 350px) {
-	header {
-		flex-direction: column;
-	}
-}
-
 .material-symbols-outlined {
-	font-size: 8rem;
+	font-size: max(4rem, 8vw);
 	margin-right: 20px;
 }
+
 
 main {
 	flex-grow: 1;
@@ -118,13 +110,14 @@ main {
 }
 
 .popup-btn {
-	font-size: 2rem;
+	font-size: max(1rem, 2vw);
 	background-color: var(--custom-citron);
 	border: none;
 	width: 20%;
 	border-radius: var(--roundness-button);
 	color: var(--custom-wenge-darker);
 	margin-bottom: 20px;
+	padding: 5px;
 }
 
 .popup-btn:hover {
@@ -147,11 +140,6 @@ main {
 	display:flex;
 	place-content: center;
 	align-items: center;
-}
-
-#add-icon {
-	font-size: 4rem;
-	margin-right: 0px;
 }
 
 .add-books {
@@ -182,7 +170,7 @@ main {
 #close {
 	position: absolute;
 	bottom: 86%;
-	left: 79%;
+	left: 76%;
 	color: var(--custom-ivory)
 }
 
@@ -196,7 +184,7 @@ main {
 	background-color: var(--custom-citron);
 	color: var(--custom-wenge);
 	border-radius: var(--roundness-button);
-	font-size: 1.3rem;
+	font-size: min(1.3rem, 6vw);
 }
 
 
@@ -207,6 +195,7 @@ main {
 }
 
 fieldset input {
+	width: 95%;
 	padding: 5px;
 	margin: 8px 0px;
 	border: none;
@@ -289,7 +278,7 @@ footer {
 	flex-direction: column;
 	align-items: center;
 	position: fixed;
-	width: 22rem;
+	width: min(60vw, 22rem);
 	bottom: 5rem;
 	right: 3rem;
 	background: var(--custom-cinereous);
@@ -331,3 +320,13 @@ footer {
 	margin-top: 10px;
 }
 
+
+
+@media (max-width: 350px) {
+	header {
+		flex-direction: column;
+	}
+	.material-symbols-outlined {
+		margin-right: 0px;
+	}
+}
